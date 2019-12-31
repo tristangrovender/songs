@@ -7,4 +7,9 @@ class SongList extends Component {
     }
 }
 
-export default connect()(SongList);
+const mapStateToProps = state => {
+    // This shows up as props inside our Component
+    return { songs: state.songs };
+};
+
+export default connect(mapStateToProps)(SongList);
